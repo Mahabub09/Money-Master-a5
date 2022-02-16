@@ -1,3 +1,4 @@
+/* random styles  */
 .txt-color{
     color: #109294
 
@@ -14,7 +15,9 @@
 .incm-div{
     display: inline;
 }
-
+/*-------------------
+   mobile responsive 
+ --------------------- */
 @media only screen and (max-width:576px) {
     .bucks-con{
         flex-direction: column;
