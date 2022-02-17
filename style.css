@@ -14,6 +14,21 @@
 }
 .incm-div{
     display: inline;
+
+}
+.notify {
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    background: salmon;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    display: none;
+}
+.notify-section{
+    width: 35%;
+    margin: 0 auto;
 }
 /*-------------------
    mobile responsive 

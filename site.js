@@ -1,11 +1,12 @@
 function incomeTotal() {
     const incomeInput = document.getElementById('income-input');
     const incomeAmount = parseFloat(incomeInput.value);
-    if (incomeAmount >= 0) {
-        return incomeAmount;
-    } else {
-        document.getElementById('income-error').innerText = "Error! Please provide valid number";
+    const failError = document.getElementById('notify-fail');
+    if (incomeAmount <= 0) {
+
+        failError.style.display = 'block';
     }
+
 }
 //function declaration 
 function totalCost(item) {
@@ -18,28 +19,28 @@ document.getElementById('calculator-button').addEventListener('click', function 
     //=======income input
 
     const income = document.getElementById('income-input').value;
-    // const incomeMoney = parseFloat(income);
+
 
     const incomeInput = document.getElementById('income-input').value;
     const incomeAmount = parseFloat(incomeInput);
 
     //====expenses input
-    //=====food
+    //=====food amount
 
     const foodCost = totalCost('food'); // calling function using parameter
     const rentCost = totalCost('rent'); // calling function using parameter
 
-    //=====clothes
+    //=====clothes amount
 
     const clothesCost = totalCost('clothes'); // calling function using parameter
     const totalExpenses = document.getElementById('total');
 
-    //=====total expenses
+    //=====amount of total expenses
 
     totalExpenses.innerText = foodCost + rentCost + clothesCost;
     const totalExpensesNumber = parseFloat(totalExpenses.innerText);
 
-    //======initial remaining balance
+    //======balance of initial remaining
 
     const totalBalance = document.getElementById('initial-remaining');
     const totalBalanceText = totalBalance.innerText;
